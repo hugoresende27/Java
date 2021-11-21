@@ -41,7 +41,7 @@ public class Livro_1 {
         System.out.println(idade_em_meses_var);
         amigo.alterarIdade(50);
         System.out.println("Idade depois de 50 em meses:: "+amigo.idadeEmMeses());
-        System.out.println("Hoje é dia\n");
+        System.out.println("Hoje é dia ");
         System.out.println(new Date());     //print da data, com recurso ao import util.*
     }
     

@@ -30,6 +30,7 @@ Número de faltas <=3
         ///////////////////CICLO PARA LER AS NOTAS////////////////
         for (int i=0;i<3;i++){
             System.out.printf("Nota do teste %d --> " , i+1);
+            //System.out.println("Informe a nota do teste " + (i+1) + ":");
             notas += input.nextFloat();//notas vão ser somadas na var notas
         }
         System.out.print("Quantas faltas? --> ");

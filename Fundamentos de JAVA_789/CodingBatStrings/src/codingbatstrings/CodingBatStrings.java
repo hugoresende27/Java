@@ -12,8 +12,18 @@ public class CodingBatStrings {
 
     public static String withoutX2(String str) {
         String res="";
-        if (str.charAt(0)=='x' || str.charAt(1) == 'x'){
-            res = str.replace("x","");
+        for (int i=0; i<str.length();i++){
+            if (i==0 && str.charAt(i) != 'x'){       
+                //System.out.println(str.charAt(i)+ " | ");
+                res += str.charAt(i);
+            }
+            else if (i==1 && str.charAt(i) != 'x'){       
+            //System.out.println(str.charAt(i)+ " | ");
+                res += str.charAt(i);
+            }
+            else if (i>1){
+                res+=str.charAt(i);
+            }
         }
         return res;
 }

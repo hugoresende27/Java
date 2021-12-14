@@ -1,0 +1,6 @@
+exercicio7.Conversor
+exercicio7.Fores
+exercicio7.Multiplicacao
+exercicio7.AreaCirculo
+exercicio7.Exercicio7
+exercicio7.Corpo

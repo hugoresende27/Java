@@ -48,7 +48,7 @@ public class Exc11 {
     }
     
     static void nomeMes(String n){
-        switch (n){
+        switch (n.toLowerCase()){
                 case "janeiro":
                 case "fevereiro":
                 case "marco":
@@ -91,7 +91,7 @@ public class Exc11 {
         */
         String mesB = "";
         System.out.println("Qual o mês? --> ");
-        mesB = input.nextLine().toLowerCase();
+        mesB = input.nextLine();//.toLowerCase();
         nomeMes(mesB);
         
         

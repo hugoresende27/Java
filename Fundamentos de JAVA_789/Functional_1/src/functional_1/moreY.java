@@ -16,9 +16,8 @@ import java.util.stream.Collectors;
  */
 public class moreY {
     public static List<String> moreY(List<String> strings) {
-        return strings.stream().
-                map(x -> x.concat("y"))
-                .collect(Collectors.toList());
+        strings.replaceAll(x-> "y" + x +"y");
+        return strings;
 }
     public static void main(String[] args) {
         List<String> lst = new ArrayList<String>();

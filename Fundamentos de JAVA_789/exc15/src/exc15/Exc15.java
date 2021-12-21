@@ -22,6 +22,7 @@ Para evitar repetir maiúsculas e minúsculas, use o comando equalsIgnoreCase
 package exc15;
 
 
+import static java.lang.Character.isLetter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
@@ -169,7 +170,12 @@ public class Exc15 {
             case 2:
                 System.out.println("Qual a letra?");
                 char letra = Character.toLowerCase((input.next().charAt(0)));
-                quinzeB(letra);
+                if (isLetter(letra)){
+                    quinzeB(letra);
+                }else {
+                    System.out.println("LETRAS APENAS");
+                }
+                
                 break;
             case 3:
                 System.out.println("O ANO ATUAL:: "+anoAtual);

@@ -4,6 +4,8 @@ However, if the concatenation creates a double-char, then omit one of the chars,
 conCat("abc", "cat") → "abcat"
 conCat("dog", "cat") → "dogcat"
 conCat("abc", "") → "abc"
+//////////////////////////////////////////////////////////////
+
  */
 package codingbatstrings;
 

@@ -1,5 +1,6 @@
 /*
 Aula sobre while e do while.
+
  */
 package aulawhiledowhile;
 
@@ -16,22 +17,34 @@ public class AulaWhileDoWhile {
      */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        // /////////////////////////////////////////
-        int x = 0;
-        while (x<=10){
-            System.out.println("WHILE "+x);
-            x++;
-        }
-  //////////////////////////////////////////////////////////////////      
-        do {
-            System.out.println("DOWHILE "+x);
-            x--;
-        }while (x>=0);
- ////////////////////////////////////////////////////////////////////
+   ////////////////////////////////////////////////////     
         String res="";
         do{
-            System.out.println("Quer sair(s/n)? ->");
-            res = input.next();
+   
+        // /////////////////////////////////////////
+            System.out.print("Qual o inicio?--> ");
+            int inicio = input.nextInt();
+            System.out.print("Qual o fim?--> ");
+            int fim = input.nextInt();
+            System.out.print("Quanto é o passo?--> ");
+            int passo = input.nextInt();
+            
+            int fim2 = inicio;
+            
+            System.out.println("WHILE");
+            while (inicio<=fim){
+                System.out.print(inicio+ " | ");
+                inicio +=passo;
+            }
+      //////////////////////////////////////////////////////////////////    
+            System.out.println("\nAGORA PAR TRÁS COM DO WHILE");
+            do {
+                System.out.print(inicio+ " | ");
+                inicio-=passo;
+            }while (inicio>=fim2);
+     ////////////////////////////////////////////////////////////////////
+            System.out.print("\nQuer sair(s/n)? ->");
+            res = input.next().toLowerCase();
         }while (!"s".equals(res));
     }
     

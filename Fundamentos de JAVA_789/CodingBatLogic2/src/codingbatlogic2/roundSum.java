@@ -15,10 +15,36 @@ package codingbatlogic2;
  * @author Hugo
  */
 public class roundSum {
-    public static int roundSum(int a, int b, int c) {
-        return a+b+c;
+    /////////////////////////////////////////////////////
+    public static int round10(int num) {
+        if ((num%10)>=5){
+            num = num-(num%10)+10;
+        }else {
+            num = num-(num%10);
+        }
+        return num;
     }
+    ///////////////////////////////////////////////////////
+    public static int round10_B(int num){
+        int remainder = num % 10;
+        num -= remainder;
+        if (remainder >= 5) {
+          num += 10;
+        }
+        return num;
+}
+    }
+    ///////////////////////////////////////////////////////
+    public static int roundSum(int a, int b, int c) {
+        
+        
+        return round10(a)+round10(b)+round10(c);
+    }
+    
+    /////////////////////////////////////////////////////////
     public static void main(String[] args) {
         System.out.println(roundSum(16, 17, 18));
+        System.out.println(roundSum(12, 13, 14));
+        System.out.println(roundSum(6, 4, 4));
     }
 }

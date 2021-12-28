@@ -27,7 +27,7 @@ public class Main {
                                {"Mustang","Ranger","Ferrari"},
                                {"Lambo","Tesla","Audi"}};
 
-        for (int i=0; i<carros2.length; i++){        
+        for (int i=0; i<carros2.length; i++){
             for (int j=0; j<carros2[i].length; j++){
                 System.out.print(carros2[i][j]+"\t|\t");
             }

@@ -1,4 +1,4 @@
-package broTutorials;
+package interfaces;
 
 import java.util.jar.JarEntry;
 

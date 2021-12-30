@@ -1,4 +1,3 @@
-package broTutorials;
 /*
 static = modificador pode ser aplicado a vars metodos ou classes
 a classe que contem o static é dona desse static

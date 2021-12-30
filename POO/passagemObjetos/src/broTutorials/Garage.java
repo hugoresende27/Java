@@ -1,4 +1,4 @@
-package broTutorials;
+package passagemObjetos;
 
 public class Garage {
 

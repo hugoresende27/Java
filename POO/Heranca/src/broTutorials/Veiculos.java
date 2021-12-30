@@ -1,4 +1,4 @@
-package broTutorials;
+package Heranca;
 
 //CLASSE PAI
 //atributos em comum: velocidade

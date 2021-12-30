@@ -1,4 +1,4 @@
-package broTutorials;
+package interfaces;
 
 public interface Predator {
 

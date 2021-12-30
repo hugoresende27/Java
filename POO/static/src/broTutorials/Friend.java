@@ -1,5 +1,3 @@
-package broTutorials;
-
 public class Friend {
 
     String name;

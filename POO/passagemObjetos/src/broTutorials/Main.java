@@ -1,4 +1,4 @@
-package broTutorials;
+package passagemObjetos;
 /*
 posso passar objetos como parametros
  */

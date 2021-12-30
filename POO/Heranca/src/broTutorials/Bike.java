@@ -1,4 +1,4 @@
-package broTutorials;
+package Heranca;
 
 public class Bike extends Veiculos {
     //atributos só da Bike

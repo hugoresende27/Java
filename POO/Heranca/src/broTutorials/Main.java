@@ -1,4 +1,4 @@
-package broTutorials;
+package Heranca;
 /*
 HERANCA = usar palavra extends na classe
 As classes que recebem a herança do pai tem acesso aos seus metodos e atributos, não sendo preciso reescrever código

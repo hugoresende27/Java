@@ -1,4 +1,4 @@
-package broTutorials;
+package interfaces;
 
 public class Fish  implements  Prey,Predator{//a class Fish implementa Prey e Predator
     @Override

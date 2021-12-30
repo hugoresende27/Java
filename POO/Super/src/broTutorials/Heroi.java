@@ -1,5 +1,3 @@
-package broTutorials;
-
 public class Heroi extends  Pessoa{
 
     String poder;

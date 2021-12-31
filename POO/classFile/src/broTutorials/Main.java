@@ -42,6 +42,7 @@ public class Main {
 
         try {
             FileReader reader = new FileReader("E:\\Other projects\\GitHub\\MeusProjetos\\JAVA\\Java\\POO\\ficheiros_teste\\art.txt");
+            FileReader ler = new FileReader("E:\\Other projects\\GitHub\\MeusProjetos\\JAVA\\Java\\POO\\ficheiros_teste\\art2.txt")
             int data = reader.read();
             while(data != -1) {
                 System.out.print((char)data);

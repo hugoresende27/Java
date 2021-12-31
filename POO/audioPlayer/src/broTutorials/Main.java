@@ -1,6 +1,6 @@
 package broTutorials;
 /*
-Para tocar o clip preciso de um while senão o clip toca e pára 
+Para tocar o clip preciso de um while senão o clip toca e pára
 
  */
 

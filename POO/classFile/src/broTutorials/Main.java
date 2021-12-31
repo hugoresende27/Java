@@ -40,15 +40,37 @@ public class Main {
         //				read() returns an int value which contains the byte value
         //				when read() returns -1, there is no more data to be read
 
+        ////////////////////////////////////////////////////////////////
+
         try {
-            FileReader reader = new FileReader("E:\\Other projects\\GitHub\\MeusProjetos\\JAVA\\Java\\POO\\ficheiros_teste\\art.txt");
-            FileReader ler = new FileReader("E:\\Other projects\\GitHub\\MeusProjetos\\JAVA\\Java\\POO\\ficheiros_teste\\art2.txt")
+            FileReader reader = new FileReader("E:\\Other projects\\GitHub\\MeusProjetos\\JAVA\\Java\\POO\\ficheiros_teste\\art1.txt");
+
             int data = reader.read();
             while(data != -1) {
                 System.out.print((char)data);
                 data = reader.read();
             }
             reader.close();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+         catch (IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    }
+
+
+
+        try {
+            FileReader reader2 = new FileReader("E:\\Other projects\\GitHub\\MeusProjetos\\JAVA\\Java\\POO\\ficheiros_teste\\art.txt");
+
+            int data = reader2.read();
+            while(data != -1) {
+                System.out.print((char)data);
+                data = reader2.read();
+            }
+            reader2.close();
 
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block

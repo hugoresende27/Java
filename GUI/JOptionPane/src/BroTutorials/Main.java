@@ -12,7 +12,9 @@ public class Main {
     public static void main(String[] args) {
 
         //IMAGEICON
-        ImageIcon icone = new ImageIcon("E:\\Other projects\\GitHub\\MeusProjetos\\JAVA\\Java\\GUI\\images_extra");
+        ImageIcon icone = new ImageIcon("E:\\Other projects\\GitHub\\MeusProjetos\\JAVA\\Java\\GUI\\images_extra\\hr_logo.png");
+
+        String[] respostas = {"Espetáculo!","Obrigado!","Hey Hey"};
 
         //JOPTIONPANE
 
@@ -43,9 +45,9 @@ public class Main {
                 "secret message",
                 JOptionPane.YES_NO_CANCEL_OPTION,
                 JOptionPane.INFORMATION_MESSAGE,
-                null,
-                null,
-                0);
+                icone,
+                respostas,
+                1);
 
     }
 }

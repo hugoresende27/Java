@@ -7,6 +7,10 @@ import java.awt.event.ActionListener;
 
 public class MyFrame extends JFrame implements ActionListener {
 
+    ImageIcon pizzaIco = new ImageIcon("E:\\Other projects\\GitHub\\MeusProjetos\\JAVA\\Java\\GUI\\images_extra\\pizza.jpg");
+    ImageIcon hamIco = new ImageIcon("E:\\Other projects\\GitHub\\MeusProjetos\\JAVA\\Java\\GUI\\images_extra\\hamb.jpg");
+    ImageIcon hotdogIco = new ImageIcon("E:\\Other projects\\GitHub\\MeusProjetos\\JAVA\\Java\\GUI\\images_extra\\hotdog.png");
+
     JRadioButton pizzaBtn;
     JRadioButton hambBtn;
     JRadioButton hotdogBtn;
@@ -28,10 +32,14 @@ public class MyFrame extends JFrame implements ActionListener {
         this.add(hambBtn);
         this.add(hotdogBtn);
 
+
         pizzaBtn.addActionListener(this);
         hambBtn.addActionListener(this);
         hotdogBtn.addActionListener(this);
 
+        pizzaBtn.setIcon(pizzaIco);
+        hambBtn.setIcon(hamIco);
+        hotdogBtn.setIcon(hotdogIco);
 
         this.pack();
         this.setVisible(true);

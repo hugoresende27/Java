@@ -12,6 +12,7 @@ public class MyFrame extends JFrame implements ActionListener {
     JMenuItem saveItem;
     JMenuItem exitItem;
 
+    //ICONES
     ImageIcon loadIcon;
     ImageIcon saveIcon;
     ImageIcon exitIcon;
@@ -22,7 +23,11 @@ public class MyFrame extends JFrame implements ActionListener {
         this.setSize(500,500);
         this.setLayout(new FlowLayout());
 
-        loadIcon = new ImageIcon("");
+        //ICONES
+        loadIcon = new ImageIcon("E:\\Other projects\\GitHub\\MeusProjetos\\JAVA\\Java\\GUI\\images_extra\\fixe.png");
+        saveIcon = new ImageIcon("E:\\Other projects\\GitHub\\MeusProjetos\\JAVA\\Java\\GUI\\images_extra\\hamb.jpg");
+        exitIcon = new ImageIcon("E:\\Other projects\\GitHub\\MeusProjetos\\JAVA\\Java\\GUI\\images_extra\\pizza.jpg");
+
 
         ///CRIAR JMENUBAR
         JMenuBar menu1 = new JMenuBar();
@@ -41,6 +46,13 @@ public class MyFrame extends JFrame implements ActionListener {
         loadItem.addActionListener(this);
         saveItem.addActionListener(this);
         exitItem.addActionListener(this);
+
+        //ICONES
+        loadItem.setIcon(loadIcon);
+        saveItem.setIcon(saveIcon);
+        exitItem.setIcon(exitIcon);
+
+
 
         //ADICIONAR ATALHOS DE TECLAS AO MENUS
         loadItem.setMnemonic(KeyEvent.VK_L); //L para load

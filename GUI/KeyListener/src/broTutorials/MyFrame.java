@@ -8,6 +8,7 @@ import java.awt.event.KeyListener;
 public class MyFrame extends JFrame implements KeyListener {
 
     JLabel lbl ;
+    ImageIcon img = new ImageIcon("E:\\Other projects\\GitHub\\MeusProjetos\\JAVA\\Java\\GUI\\images_extra\\jogo1.png");
 
     MyFrame(){
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -19,6 +20,7 @@ public class MyFrame extends JFrame implements KeyListener {
 
         //label
         lbl = new JLabel();
+        lbl.setIcon(img);
         lbl.setBounds(0,0,100,100);
         lbl.setBackground(Color.red);
         lbl.setOpaque(true);

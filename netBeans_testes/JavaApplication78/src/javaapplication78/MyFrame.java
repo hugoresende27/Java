@@ -1,10 +1,21 @@
-package broTutorials;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication78;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
+/**
+ *
+ * @author Hugo
+ */
 public class MyFrame extends JFrame implements KeyListener {
 
     JLabel lbl ;
@@ -33,13 +44,10 @@ public class MyFrame extends JFrame implements KeyListener {
 
         this.setVisible(true);
     }
+    
 
 
 
-
-
-    @Override
-    //quando uma letra é inserida, usa KeyChar, output char
     public void keyTyped(KeyEvent e) {
         switch (e.getKeyChar()){
             case 'a':
@@ -57,8 +65,6 @@ public class MyFrame extends JFrame implements KeyListener {
         }
     }
 
-    @Override
-    //quando a tecla é pressionada, usa KeyCode, output int
     public void keyPressed(KeyEvent e) {
         switch (e.getKeyCode()){
             case 37:
@@ -77,10 +83,10 @@ public class MyFrame extends JFrame implements KeyListener {
     }
 
     @Override
-    //quando a tecla é solta
     public void keyReleased(KeyEvent e) {
         System.out.println("keychar :: "+e.getKeyChar());
         System.out.println("keycode ->"+e.getKeyCode());
 
     }
 }
+

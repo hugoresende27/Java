@@ -18,7 +18,7 @@ public class MyFrame extends JFrame implements ActionListener {
 
 
         //BOTÃO
-        btn = new JButton("Carregar/Gravar ficheiro");
+        btn = new JButton("Gravar ficheiro");
         btn.addActionListener(this);
 
 

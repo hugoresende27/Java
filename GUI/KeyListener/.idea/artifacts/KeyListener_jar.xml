@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="KeyListener:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/KeyListener_jar</output-path>
+    <root id="archive" name="KeyListener.jar">
+      <element id="module-output" name="KeyListener" />
+    </root>
+  </artifact>
+</component>

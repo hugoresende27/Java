@@ -18,12 +18,15 @@ public class MyFrame extends JFrame implements KeyListener {
         //add do keyListener
         this.addKeyListener(this);//ativar o keylistener
 
+        //mudar a cor de fundo da frame
+        this.getContentPane().setBackground(Color.black);
+
         //label
         lbl = new JLabel();
         lbl.setIcon(img);
         lbl.setBounds(0,0,100,100);
-        lbl.setBackground(Color.red);
-        lbl.setOpaque(true);
+        //lbl.setBackground(Color.red);
+        //lbl.setOpaque(true);
 
 
         this.add(lbl);

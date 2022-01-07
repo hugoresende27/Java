@@ -7,11 +7,13 @@ Recursion in java is a process in which a method calls itself continuously. A me
 called recursive method. It makes the code compact but complex to understand. Syntax: ... methodname();//calling same method.
 processo em que o metodo se chama a si mesmo continuamente
  */
+
+
 public class Main {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
+        
         /////////////////////////////////////////////////////////////////////////
         System.out.println("Quantas vezes?");
         int vezes = input.nextInt();
@@ -27,6 +29,11 @@ public class Main {
         System.out.println("X-> ");
         int a = input.nextInt();
         countRecursive(a);
+
+        ///////////////////////////////////////////////////////////////////////
+        System.out.println("FATORIAL-->");
+        int z = input.nextInt();
+        System.out.println("FAT:: "+fatorial(z));
 
     }
 
@@ -59,5 +66,13 @@ public class Main {
             System.out.println("THE END");
         }
     }
-    
+
+    static int fatorial (int x) {
+        if (x >= 1) {
+            return x * fatorial(x-1);
+        } else {
+            return 1;
+        }
+    }
+
 }

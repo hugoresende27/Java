@@ -9,6 +9,7 @@ public class MyFrame  extends JFrame {
     MyFrame(){
 
         panel = new MyPanel();
+        this.setTitle("Hugo Resende Products @2022");
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.add(panel);

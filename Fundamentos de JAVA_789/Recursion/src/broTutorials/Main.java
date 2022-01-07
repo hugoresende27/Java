@@ -13,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
+
         /////////////////////////////////////////////////////////////////////////
         System.out.println("Quantas vezes?");
         int vezes = input.nextInt();

@@ -13,10 +13,7 @@ So, the object serialized on one platform can be deserialized on a different pla
 5.s.close();f.close();
  */
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
 public class Main {
 
@@ -37,5 +34,8 @@ public class Main {
 
         //cria ficheiro userInfo.ser (Java bytecode) na raiz do projeto
         System.out.println("Info do objeto guardado");
+
+        long serialVersionUID = ObjectStreamClass.lookup(u.getClass()).getSerialVersionUID();
+        System.out.println("SERIAL VERSION UID:::"+ serialVersionUID);
     }
 }

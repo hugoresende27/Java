@@ -17,15 +17,33 @@ public class Main {
         //arraylist do tipo JLabel
         ArrayList<JLabel> deck = new ArrayList<JLabel>();
 
-        ImageIcon AS = new ImageIcon("img/A_spades.png");
+        /*
+        //adiciona as de espadas ao deck
+        ImageIcon AS = new ImageIcon("img/0.png");
         JLabel asLbl = new JLabel(AS);
         deck.add(asLbl);
 
+        //adiciona rei de espadas ao deck
+        ImageIcon KS = new ImageIcon("img/1.png");
+        JLabel ksLbl = new JLabel(KS);
+        deck.add(ksLbl);
+         */
 
-        frame.add(deck.get(0));
+        //metodo objeto anonimo
+        for (int i =0; i<10; i++){
+            deck.add(new JLabel(new ImageIcon("img/"+i+".png")));
+            frame.add(deck.get(i));
+        }
+
+
+
+        //adicionar cartas à frame
+        //frame.add(deck.get(1));
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(720,720);
+        frame.setSize(1500,800);
         frame.setLayout(new FlowLayout());
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
 
     }

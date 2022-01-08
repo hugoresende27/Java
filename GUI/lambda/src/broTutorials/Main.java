@@ -32,4 +32,10 @@ public class Main {
     }
 
  */
+
+
+        MyFrame x = new MyFrame();
+
+    }
 }
+

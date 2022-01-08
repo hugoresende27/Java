@@ -17,7 +17,7 @@ public class MyFrame extends JFrame {
         btnA.setBounds(100,100,100,100);
         btnB.setBounds(200,100,100,100);
         btnC.setBounds(300,100,100,100);
-        
+
         //adicionar new action listener
         btnA.addActionListener(new ActionListener() {
             @Override

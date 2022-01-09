@@ -10,6 +10,6 @@ ASCII - American Standart Code for Information Interchange
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        EncryptionProgram ep = new EncryptionProgram();
     }
 }

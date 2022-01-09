@@ -155,7 +155,7 @@ public class EncryptionProgram {
         }
         System.out.print("Decrypted::");
         for(char x : letters){
-            System.out.print(x+" ");
+            System.out.print(x);
         }
         System.out.println();
 

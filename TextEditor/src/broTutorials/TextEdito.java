@@ -37,6 +37,10 @@ public class TextEdito extends JFrame implements ActionListener {
         this.setSize(500,500);
         this.getContentPane().setBackground(Color.gray);
 
+        /////////LOGO DA JANELA
+        ImageIcon img = new ImageIcon("img/hr_logo.png");//criar icone
+        this.setIconImage(img.getImage());     //setIconImage usa objeto img com metodo .getImage()
+
         this.setLayout(new FlowLayout());
         this.setLocationRelativeTo(null);   //centrar janela
         this.setResizable(false);
@@ -104,6 +108,7 @@ public class TextEdito extends JFrame implements ActionListener {
             //ajudaMenu////////////////
             ajudaMenu = new JMenu("Ajuda");
             sobreItem = new JMenuItem("Sobre");
+            sobreItem.addActionListener(this);
 
             ajudaMenu.add(sobreItem);
 
@@ -193,8 +198,13 @@ public class TextEdito extends JFrame implements ActionListener {
                 }
             }
         }
+        ///// EXIT ITEM ///////////
         if (e.getSource()==exitItem){
             System.exit(0);
+        }
+
+        if (e.getSource()==sobreItem){
+            JOptionPane.showMessageDialog(null,"Programa criado por Hugo Resende @2022\ndeve gravar os ficheiros com a extensão .txt","Ajuda",JOptionPane.PLAIN_MESSAGE);
         }
     }
 }

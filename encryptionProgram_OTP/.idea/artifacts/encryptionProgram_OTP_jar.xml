@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="encryptionProgram_OTP:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/encryptionProgram_OTP_jar</output-path>
+    <root id="archive" name="encryptionProgram_OTP.jar">
+      <element id="module-output" name="encryptionProgram_OTP" />
+    </root>
+  </artifact>
+</component>

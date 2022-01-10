@@ -21,7 +21,6 @@ public class exercicio2 {
      */
     public static void main(String[] args) {
 
-        MyFrame nova = new MyFrame();
 
         //biblioteca Scanner para input de dados
         Scanner input = new Scanner(System.in);

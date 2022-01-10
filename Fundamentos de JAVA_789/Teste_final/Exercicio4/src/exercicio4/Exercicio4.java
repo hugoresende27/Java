@@ -54,10 +54,7 @@ public class Exercicio4 {
         System.out.println("TOTAL ALUNOS:: "+totalAlunos);
         //output da media float arredondado a 0 casas decimais, 8.66 vai imprimir 9
         System.out.printf("MEDIA DE ALUNOS POR TURMA:: %.0f\n",mediaAlunos);
-     
-        
-        
-        
+  
     }
     
 }

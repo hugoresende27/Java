@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="CodingBatStrings">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/CodingBatStrings.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

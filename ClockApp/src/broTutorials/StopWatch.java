@@ -4,8 +4,18 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class StopWatch implements ActionListener {
+
+    JTextArea temposLbl = new JTextArea();
+
+    ArrayList <String> objArray = new ArrayList<>();
+
+
+    JMenuBar menuBar;   //barra
+    JMenu ajudaMenu;    //separador
+    JMenuItem sobreItem;//item
 
     JFrame frame = new JFrame();
     JButton startBtn = new JButton("start");
@@ -42,21 +52,46 @@ public class StopWatch implements ActionListener {
         }
     });
 
+
+    //CONSTRUTOR//=====================================
     StopWatch(){
 
+        //MENUBAR//========================
+        menuBar = new JMenuBar();
+
+        //ajudaMenu////////////////
+        ajudaMenu = new JMenu("Ajuda");
+        sobreItem = new JMenuItem("Sobre");
+        sobreItem.addActionListener(this);
+
+        ajudaMenu.add(sobreItem);
+
+        //add ao menuBar/////////////////
+        menuBar.add(ajudaMenu);
+
+        frame.setJMenuBar(menuBar);//adicionar o menubar, setJMenuBar
+        //============================================================
+
         timeLlb.setText(hoursStr + ":" + minStr + ":" + segsStr+":"+miliStr);
-        timeLlb.setBounds(75,100,250,100);
+        timeLlb.setBounds(75,0,250,100);
         timeLlb.setFont(new Font("Consolas",Font.PLAIN,35));
         timeLlb.setBorder(BorderFactory.createBevelBorder(1));
         timeLlb.setOpaque(true);
         timeLlb.setHorizontalAlignment(JTextField.CENTER);
 
-        startBtn.setBounds(100,200,100,50);
+        temposLbl.setText("Tempos");
+        temposLbl.setBounds(0,150,420,400);
+        temposLbl.setFont(new Font("Consolas",Font.BOLD,35));
+        temposLbl.setBorder(BorderFactory.createBevelBorder(1));
+        temposLbl.setOpaque(true);
+        temposLbl.setEditable(false);
+
+        startBtn.setBounds(100,100,100,50);
         startBtn.setFont(new Font("Ink Free",Font.PLAIN,20));
         startBtn.setFocusable(false);
         startBtn.addActionListener(this);
 
-        resetBtn.setBounds(200,200,100,50);
+        resetBtn.setBounds(200,100,100,50);
         resetBtn.setFont(new Font("Ink Free",Font.PLAIN,20));
         resetBtn.setFocusable(false); //border q fica no botão se true
         resetBtn.addActionListener(this);
@@ -64,10 +99,12 @@ public class StopWatch implements ActionListener {
         frame.add(startBtn);
         frame.add(resetBtn);
 
+        frame.add(temposLbl);
         frame.add(timeLlb);
 
+
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(420,420);
+        frame.setSize(420,620);
         frame.setLayout(null);//sem layout manager
         frame.setTitle("StopWatch HR@2022");
         frame.setResizable(false);
@@ -92,6 +129,20 @@ public class StopWatch implements ActionListener {
                 started=false;
                 startBtn.setText("start");
                 stop();
+
+                String x = timeLlb.getText();
+                objArray.add(x);
+                System.out.println(x);
+
+                String formattedString = objArray.toString()
+                        .replace(",", "")  //remove the commas
+                        .replace("[", "")  //remove the right bracket
+                        .replace("]", "")  //remove the left bracket
+                        .trim();           //remove trailing spaces from partially initialized arrays
+
+                temposLbl.setLineWrap(true);//wrap das linhas
+                temposLbl.setWrapStyleWord(true);//para quebrar a linha
+                temposLbl.setText(formattedString);
             }
         }
 
@@ -99,6 +150,9 @@ public class StopWatch implements ActionListener {
             started=false;
             startBtn.setText("start");
             reset();
+        }
+        if (e.getSource()==sobreItem){
+            JOptionPane.showMessageDialog(null,"Programa criado por Hugo Resende @2022\nCronómetro de precisão milisegundos","Ajuda",JOptionPane.PLAIN_MESSAGE);
         }
 
     }
@@ -110,7 +164,9 @@ public class StopWatch implements ActionListener {
 
     ///////////STOP////////////////
     void stop(){
+
         timer.stop();
+
     }
 
     ///////////RESET////////////////

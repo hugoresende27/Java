@@ -12,15 +12,17 @@ public class StopWatch implements ActionListener {
     JButton resetBtn = new JButton("reset");
     JLabel timeLlb = new JLabel();
     int timeQtd = 0;
+    int miliQtd = 0;
     int secQtd = 0;
     int minQtd = 0;
     int hoursQtd = 0;
     boolean started = false;
+    String miliStr = String.format("%02d",miliQtd);
     String segsStr = String.format("%02d",secQtd);
     String minStr = String.format("%02d",minQtd);
     String hoursStr = String.format("%02d",hoursQtd);
 
-    Timer timer = new Timer(1000, new ActionListener() {
+    Timer timer = new Timer(10, new ActionListener() {
         @Override
         public void actionPerformed(ActionEvent e) {
 
@@ -28,20 +30,22 @@ public class StopWatch implements ActionListener {
             hoursQtd = (timeQtd/3600000);
             minQtd = (timeQtd/60000) % 60;
             secQtd = (timeQtd/1000) % 60;       //%60 para não mostrar valores acima de 60
+            miliQtd = (timeQtd/100) % 60;
 
+            miliStr = String.format("%02d",miliQtd);
             segsStr = String.format("%02d",secQtd);
             minStr = String.format("%02d",minQtd);
             hoursStr = String.format("%02d",hoursQtd);
 
-            timeLlb.setText(hoursStr+ ":" +minStr + ":" + segsStr);
+            timeLlb.setText(hoursStr+ ":" +minStr + ":" + segsStr+ ":"+miliStr);
 
         }
     });
 
     StopWatch(){
 
-        timeLlb.setText(hoursStr + ":" + minStr + ":" + segsStr);
-        timeLlb.setBounds(100,100,200,100);
+        timeLlb.setText(hoursStr + ":" + minStr + ":" + segsStr+":"+miliStr);
+        timeLlb.setBounds(75,100,250,100);
         timeLlb.setFont(new Font("Consolas",Font.PLAIN,35));
         timeLlb.setBorder(BorderFactory.createBevelBorder(1));
         timeLlb.setOpaque(true);
@@ -66,7 +70,9 @@ public class StopWatch implements ActionListener {
         frame.setSize(420,420);
         frame.setLayout(null);//sem layout manager
         frame.setTitle("StopWatch HR@2022");
+        frame.setResizable(false);
         frame.setLocationRelativeTo(null);
+        frame.getContentPane().setBackground(Color.black);
 
 
         frame.setVisible(true);
@@ -111,14 +117,16 @@ public class StopWatch implements ActionListener {
     void reset(){
         timer.stop();
         timeQtd=0;
+        miliQtd = 0;
         secQtd=0;
         minQtd=0;
         hoursQtd=0;
 
+        miliStr = String.format("%02d",miliQtd);
         segsStr = String.format("%02d",secQtd);
         minStr = String.format("%02d",minQtd);
         hoursStr = String.format("%02d",hoursQtd);
 
-        timeLlb.setText(hoursStr+ ":" +minStr + ":" + segsStr);
+        timeLlb.setText(hoursStr+ ":" +minStr + ":" + segsStr+":"+miliStr);
     }
 }

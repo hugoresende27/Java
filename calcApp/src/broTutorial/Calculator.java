@@ -13,6 +13,11 @@ public class Calculator implements ActionListener {
         Calculator calc = new Calculator();
     }
 
+    JMenuBar menuBar;   //barra
+    JMenu ajudaMenu;    //separador
+    JMenuItem sobreItem;//item
+
+
     /////////// VAR GLOBAIS /////////////////////////
     JFrame frame;
     JTextField txtField;
@@ -30,6 +35,22 @@ public class Calculator implements ActionListener {
 
     /////////// CONSTRUCTOR /////////////////////////
     Calculator() {
+
+        //MENUBAR//========================
+        menuBar = new JMenuBar();
+
+        //ajudaMenu////////////////
+        ajudaMenu = new JMenu("Ajuda");
+        sobreItem = new JMenuItem("Sobre");
+        sobreItem.addActionListener(this);
+
+        ajudaMenu.add(sobreItem);
+
+        //add ao menuBar/////////////////
+        menuBar.add(ajudaMenu);
+
+        frame.setJMenuBar(menuBar);//adicionar o menubar, setJMenuBar
+        //============================================================
 
         frame = new JFrame("Calculadora HR@2022");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

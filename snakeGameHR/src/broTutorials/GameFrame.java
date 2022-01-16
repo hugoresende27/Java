@@ -41,7 +41,7 @@ public class GameFrame extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==sobreItem){
-            JOptionPane.showMessageDialog(null,"Programa criado por Hugo Resende @2022\nCronómetro de precisão milisegundos","Ajuda",JOptionPane.PLAIN_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Programa criado por Hugo Resende @2022\nSnake Game","Ajuda",JOptionPane.PLAIN_MESSAGE);
         }
     }
 }

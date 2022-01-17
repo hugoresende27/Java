@@ -8,6 +8,8 @@ public class GameFrame extends JFrame implements ActionListener {
     JMenuBar menuBar;   //barra
     JMenu ajudaMenu;    //separador
     JMenuItem sobreItem;//item
+    JMenu settMenu;    //separador
+    JMenuItem velItem;//item
 
     //CONSTRUCTOR
     GameFrame () {
@@ -21,8 +23,16 @@ public class GameFrame extends JFrame implements ActionListener {
 
         ajudaMenu.add(sobreItem);
 
+        //settingMenu////////////////
+        settMenu = new JMenu("Settings");
+        velItem = new JMenuItem("Nível");
+        velItem.addActionListener(this);
+
+        settMenu.add(velItem);
+
         //add ao menuBar/////////////////
         menuBar.add(ajudaMenu);
+        menuBar.add(settMenu);
 
         this.setJMenuBar(menuBar);//adicionar o menubar, setJMenuBar
         //============================================================
@@ -43,5 +53,10 @@ public class GameFrame extends JFrame implements ActionListener {
         if (e.getSource()==sobreItem){
             JOptionPane.showMessageDialog(null,"Programa criado por Hugo Resende @2022\nSnake Game","Ajuda",JOptionPane.PLAIN_MESSAGE);
         }
+        if (e.getSource()==velItem){
+            setVisible(false); //you can't see me!
+            dispose(); //Destroy the JFrame object
+            new GameFrame();
+             }
     }
 }

@@ -1,12 +1,13 @@
 package broTutorials;
 
 import javax.swing.*;
+import javax.swing.Timer;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.util.Random;
+import java.util.*;
 
 public class GamePanel extends JPanel implements ActionListener {
 
@@ -20,6 +21,7 @@ public class GamePanel extends JPanel implements ActionListener {
     static final int UNIT_SIZE = 25;  //tamanho das unidades
     static final int GAME_UNITS = (SCREEN_WIDTH*SCREEN_HEIGHT/UNIT_SIZE);
     static int DELAY = 50;
+    int vel;
 
     //arrays de coordenadas /////////////////
     final int x[]= new int [GAME_UNITS];
@@ -48,6 +50,7 @@ public class GamePanel extends JPanel implements ActionListener {
         this.setFocusable(true);
         this.addKeyListener(new MyKeyAdapter());
 
+
         startGame();
     }
 
@@ -56,10 +59,12 @@ public class GamePanel extends JPanel implements ActionListener {
     //START GAME //////////////////////////////////
     public void startGame(){
 
+        vel = startMenu();
         newApple();
         running= true;
-        timer = new Timer(DELAY,this);
+        timer = new Timer(vel,this);
         timer.start();
+        System.out.println(vel);
 
     }
 
@@ -147,7 +152,7 @@ public class GamePanel extends JPanel implements ActionListener {
             bodyParts++;        //aumenta bodyparts
             applesEaten++;      //aumenta applesEaten
             newApple();         //gerar nova maça
-            DELAY += 5;
+            vel += 5;
         }
     }
 
@@ -202,13 +207,67 @@ public class GamePanel extends JPanel implements ActionListener {
         FontMetrics metrics2 = getFontMetrics(g.getFont());
         g.drawString("Game Over",(SCREEN_WIDTH-metrics2.stringWidth("Game Over"))/2,SCREEN_HEIGHT/2);
 
+        String message = "Score : "+applesEaten+"\nTentar de novo?";
+        String title = "Game Over";
+        int reply = JOptionPane.showConfirmDialog(null, message, title, JOptionPane.YES_NO_OPTION);
+        if (reply == JOptionPane.YES_OPTION){
+            new GameFrame();
+        } else {
+            System.exit(0);
+        }
 
     }
 
     //startMenu///////////////////////////////////
-    public void startMenu(){
-        JButton btnNovoJogo = new JButton("Start");
-        
+    public int startMenu(){
+
+        //SHOWOPTION DIALOG tudo num só
+
+        Integer[] velocidade = { 25, 50, 75, 100, 125, 150 ,175,200,225,250};
+
+        Integer input = (Integer) JOptionPane.showInputDialog(null, "Escolha a velocidade",
+                "Snake Game Settings", JOptionPane.QUESTION_MESSAGE, null, // Use
+                // default
+                // icon
+                velocidade, // Array of choices
+                velocidade[1]); // Initial choice
+        int velocidadeFinal;
+        switch (input){
+            case 25:
+                velocidadeFinal = 250;
+                break;
+            case 50:
+                velocidadeFinal = 200;
+                break;
+            case 75:
+                velocidadeFinal = 175;
+                break;
+            case 100:
+                velocidadeFinal = 150;
+                break;
+            case 125:
+                velocidadeFinal = 125;
+                break;
+            case 150:
+                velocidadeFinal = 100;
+                break;
+            case 175:
+                velocidadeFinal = 75;
+                break;
+            case 200:
+                velocidadeFinal = 50;
+                break;
+            case 225:
+                velocidadeFinal = 25;
+                break;
+            case 250:
+                velocidadeFinal = 10;
+                break;
+            default:
+                velocidadeFinal = 100;
+                break;
+        }
+        return velocidadeFinal;
     }
 
     @Override

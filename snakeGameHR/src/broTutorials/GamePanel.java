@@ -201,6 +201,14 @@ public class GamePanel extends JPanel implements ActionListener {
         //alinhar texto ao centro
         FontMetrics metrics2 = getFontMetrics(g.getFont());
         g.drawString("Game Over",(SCREEN_WIDTH-metrics2.stringWidth("Game Over"))/2,SCREEN_HEIGHT/2);
+
+
+    }
+
+    //startMenu///////////////////////////////////
+    public void startMenu(){
+        JButton btnNovoJogo = new JButton("Start");
+        
     }
 
     @Override

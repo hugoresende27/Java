@@ -20,6 +20,13 @@ import java.util.Scanner;
  */
 public class ExcStocks {
     
+    public static void menu(){
+        System.out.println("1.ADICIONAR PRODUTO");
+        System.out.println("2.ADICIONAR STOCK");
+        System.out.println("3.RETIRAR STOCK");
+        System.out.println("4.SAIR");
+    }
+    
     public static Produto criarProduto(){
         Scanner input = new Scanner (System.in);
         
@@ -42,27 +49,46 @@ public class ExcStocks {
     public static void main(String[] args) {
         
         Scanner input = new Scanner (System.in);
-        Produto p1 = criarProduto();
-        System.out.println(p1.toString());
         
-        
-        System.out.println("Quanto quer adicionar ao stock? ");
-        int adiciona = input.nextInt();
-        p1.adicionarProduto(adiciona);
-        System.out.println(p1.toString());
-            
-        int retira;
+        int op;
         do{
-            System.out.println("Quanto quer retirar ao stock? ");
-            retira = input.nextInt();    
-            if (retira > p1.qtd){
-                System.out.println("Nao pode retirar mais do que o stock existente\nSTOCK::"+p1.qtd);
+            menu();
+            System.out.print("Opcao-> ");
+            op = input.nextInt();
+            Produto p1 = new Produto();
+            switch (op){
+                case 1:
+                    p1 = criarProduto();
+                    System.out.println(p1);
+                    break;
+                case 2:
+                    System.out.println("Quanto quer adicionar ao stock? ");
+                    int adiciona = input.nextInt();
+                    p1.adicionarProduto(adiciona);
+                    System.out.println(p1);
+                    break;
+                case 3:
+                     int retira;
+                    do{
+                        System.out.println("Quanto quer retirar ao stock? ");
+                        retira = input.nextInt();    
+                        if (retira > p1.qtd){
+                            System.out.println("Nao pode retirar mais do que o stock existente\nSTOCK::"+p1.qtd);
+                        }
+                    }while (retira > p1.qtd);
+
+                    p1.retirarProduto(retira);
+                    System.out.println(p1);   
+                    break;
+                case 4:
+                    System.out.println("Adeus...");
+                    System.exit(0);
+                    break;
+                default :
+                    System.out.println("opcao inválida\n");
+                    break;
             }
-        }while (retira>p1.qtd);
-        
-        p1.retirarProduto(retira);
-        System.out.println(p1.toString());
- 
+        }while (true);
     }
  
 }

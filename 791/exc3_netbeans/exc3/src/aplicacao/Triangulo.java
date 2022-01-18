@@ -1,7 +1,11 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Resolver agora o exercício usando uma classe com 
+três atributos para representar melhor o Triângulo 
+• Triângulo é uma entidade com três atributos: a, b, c. 
+• No exercício anterior usamos três variáveis distintas para representar 
+cada triângulo: 
+• Para melhorar isto, vamos usar uma CLASSE para representar um 
+triângulo
  */
 package aplicacao;
 

@@ -5,6 +5,7 @@
  */
 package exc3;
 
+import static funcoes.ComparaAreas.compArea;
 import java.util.Scanner;
 
 /**
@@ -38,6 +39,7 @@ public class Exc3a {
             System.out.printf("Perimetro X: %.4f Area X: %.4f\nPerimetro Y: %.4f Area Y: %.4f", perimetroX,areaX,perimetroY,areaY);
 
             //verificar se a área é NaN ou não. Se não for um triângulo área NaN
+            /*
             if ((areaX == Double.NaN) && (areaY == Double.NaN)){
                 if (areaX > areaY){
                         System.out.println("\nArea de X é maior");
@@ -51,6 +53,8 @@ public class Exc3a {
             {
                 System.out.println("Um deles não é um triângulo!");
             }
+*/
+            compArea(areaX,areaY);
 
     }
 }

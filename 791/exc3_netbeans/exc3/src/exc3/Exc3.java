@@ -6,6 +6,7 @@
 package exc3;
 
 import aplicacao.Triangulo;
+import static funcoes.ComparaAreas.compArea;
 import java.util.Scanner;
 
 /**
@@ -45,7 +46,7 @@ public class Exc3 {
             System.out.println("Soma lados Y:: "+y.somarLados());
 
            //verificar se a área é NaN ou não. Se não for um triângulo área NaN
-         
+         /*
             if ((x.area() == Double.NaN) && (y.area() == Double.NaN)){
                  if (x.area() > y.area()){
                     System.out.println("\nArea de X é maior");
@@ -58,7 +59,8 @@ public class Exc3 {
             } else {
                 System.out.println("Um deles não é um triângulo!");
             }
-           
+           */
+         compArea(x.area(),y.area());
     }
     
 }

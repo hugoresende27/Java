@@ -15,6 +15,8 @@ package aplicacao;
  */
 public class Triangulo {
     public double a,b,c;
+    
+
 
     public double area(){
 

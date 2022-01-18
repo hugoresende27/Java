@@ -60,7 +60,9 @@ public class Exc3 {
                 System.out.println("Um deles não é um triângulo!");
             }
            */
+        
          compArea(x.area(),y.area());
+         
     }
     
 }

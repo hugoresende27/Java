@@ -21,5 +21,14 @@ public class ComparaAreas {
             System.out.println("IGUAIS\n");
         }
     }
-    
+    public static double compPer (double per1,double per2){
+     //System.out.println(area1>area2 ? "\nArea X maior\n" : "\nArea Y maior\n");
+     if (per1 > per2){
+         return per1;
+     } else if (per2> per1){
+         return per2; 
+     } else {
+         return 0;
+     }
+ }
 }

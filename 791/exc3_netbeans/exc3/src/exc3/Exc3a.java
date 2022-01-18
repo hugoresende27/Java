@@ -6,6 +6,7 @@
 package exc3;
 
 import static funcoes.ComparaAreas.compArea;
+import static funcoes.ComparaAreas.compPer;
 import java.util.Scanner;
 
 /**
@@ -55,6 +56,8 @@ public class Exc3a {
             }
 */
             compArea(areaX,areaY);
+            System.out.println(compPer(perimetroX,perimetroY));
+            
 
     }
 }

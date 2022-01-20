@@ -2,8 +2,6 @@
  Fazer um programa para ler os valores da largura e altura de um retângulo. 
 A seguir, mostrar no ecrã o valor da área, perímetro e diagonal.
 
-
-
  */
 package excretangulo;
 

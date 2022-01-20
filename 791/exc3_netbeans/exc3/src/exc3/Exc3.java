@@ -63,6 +63,7 @@ public class Exc3 {
         
          compArea(x.area(),y.area());
          
+         
     }
     
 }

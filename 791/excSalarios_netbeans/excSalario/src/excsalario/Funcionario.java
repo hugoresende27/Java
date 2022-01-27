@@ -66,8 +66,6 @@ public class Funcionario {
         this.salAumento = this.salLiq + (this.salLiq * (this.percentagem/100));   
     }
     
-    
-    
 
     //TO STRING
     public String toString(){

@@ -19,6 +19,11 @@ public class Retangulo {
         return l*a;
     }
     
+    public double  area2 (){
+            //System.out.println( this.largura*this.altura);
+            return this.largura*this.altura;
+    }
+    
     public static double perimetro (double l, double a){
         return 2*(l+a);
     }

@@ -28,6 +28,10 @@ public class ExcRetangulo {
         System.out.printf("\n\tAREA:: %.2f",r1.area(r1.altura,r1.largura));
         System.out.printf("\n\tPERIMETRO:: %.2f",r1.perimetro(r1.altura,r1.largura));
         System.out.printf("\n\tDIAGONAL:: %.2f",r1.diagonal(r1.altura,r1.largura));
+        
+        System.out.println("\n\tTESTE::");
+       
+        
     }
     
 }

@@ -24,9 +24,7 @@ public class Main {
         double tax = input.nextDouble();
         System.out.print("Quantos doláres vai comprar? -->");
         double dol = input.nextDouble();
-        
-        
-        
+ 
         System.out.println("Vai pagar em euros :: "+CambioMoeda.conversao(dol, tax));
     }
     

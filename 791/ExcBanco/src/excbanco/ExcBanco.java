@@ -16,10 +16,13 @@ public class ExcBanco {
     /**
      * @param args the command line arguments
      */
+    
+   
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner input = new Scanner(System.in);
-        int numC = (int)Math.random();
+        int numC =  (int)(1+Math.random()*(1000-1));
+        Conta c1;
         
         System.out.println("-- PROGRAMA BANCO HR --");
         System.out.println("Qual o seu nome?");
@@ -29,14 +32,25 @@ public class ExcBanco {
         if (res == 's'){
             System.out.println("Qual o montante a depositar? ");
             double deposito = input.nextDouble();
-            Conta c1 = new Conta(numC,nome,deposito);
+            c1 = new Conta(numC,nome,deposito);
             System.out.println(c1);
         }
         else {
-            Conta c1 = new Conta(numC,nome);
+            c1 = new Conta(numC,nome);
             System.out.println(c1);
         }
         
+        
+        System.out.println("Valor a depositar?");
+        double depos = input.nextDouble();
+        c1.deposito(depos);
+        System.out.println(c1);
+        
+        
+        System.out.println("Valor a levantar?");
+        double levan = input.nextDouble();
+        c1.levantamento(levan);
+        System.out.println(c1);
         
         
         

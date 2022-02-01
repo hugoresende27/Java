@@ -26,12 +26,12 @@ package excbanco;
  */
 public class Conta {
     
-    
+    private int numConta ;
     private String nomeTitular;
     private double saldo=0;
     
-    
-    Conta (int num,String nome){
+    ///////////// CONSTRUTORES //////////////////
+    Conta (int num ,String nome){
         this.numConta = num;
         this.nomeTitular = nome;    
     }
@@ -39,11 +39,11 @@ public class Conta {
     Conta (int num,String nome,double depInicial){
         this.numConta = num;
         this.nomeTitular = nome;
-        this.saldo = depInicial;
+        deposito(depInicial);
     }
     
    
-    
+    ///////////// SETTERS //////////////////
     public void setNome(String nom){
         this.nomeTitular = nom;
     }
@@ -56,6 +56,8 @@ public class Conta {
         return this.numConta;
     }
     
+    
+    ///////////// GETTERS //////////////////
     public String getNome(){
         return this.nomeTitular;
     }
@@ -64,9 +66,20 @@ public class Conta {
         return this.saldo;
     }
     
+    
+    ///////////// depositos levantantamentos //////////////////
+    public void deposito (double x){
+        this.saldo += x;
+    }
+    public void levantamento (double x){
+        this.saldo -= x+5;
+    }
+    
+    
+    ///////////// TO STRING //////////////////
     public String toString(){
         return "Nome:: "+getNome()
                 +"\nNumConta:: "+getNumConta()
-                +" \nSaldo:: "+String.format("%.2f",getSaldo());
+                +" \nSaldo:: "+String.format("%.2f",getSaldo())+" €";
     }
 }

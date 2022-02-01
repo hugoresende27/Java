@@ -35,6 +35,7 @@ public class ExcStocks {
         //int quat = 0;
         
         Produto p = new Produto();
+        //System.out.println(p);
         System.out.print("NOME:: ");
         p.nome = input.nextLine();
         System.out.print("PREÇO "+p.nome+" :: ");
@@ -51,11 +52,12 @@ public class ExcStocks {
         Scanner input = new Scanner (System.in);
         
         int op;
+        Produto p1 = new Produto();
         do{
             menu();
             System.out.print("Opcao-> ");
             op = input.nextInt();
-            Produto p1 = new Produto();
+            
             switch (op){
                 case 1:
                     p1 = criarProduto();

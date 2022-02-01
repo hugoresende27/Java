@@ -31,6 +31,9 @@ public class Conta {
     private double saldo=0;
     
     ///////////// CONSTRUTORES //////////////////
+    Conta (){
+        
+    }
     Conta (int num ,String nome){
         this.numConta = num;
         this.nomeTitular = nome;    

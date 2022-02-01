@@ -9,6 +9,12 @@ Classe Produto (nome,preco,quantidade)
 Metodos (totalStock():double ; 
         adicionarProduto(qtd):void ; 
         removerProdutos(qtd):void
+Por padrão, o Java já cria esse construtor sem parâmetros para todas as classes,
+então você não precisa fazer isso se utilizará apenas construtores sem parâmetros. 
+Por outro lado, se você quiser, poderá criar mais de um construtor para uma mesma 
+classe.
+constructor does not return any value. In general, Constructor is implicitly 
+called at the time of instantiation.
  */
 package excstocks;
 
@@ -30,21 +36,24 @@ public class ExcStocks {
     public static Produto criarProduto(){
         Scanner input = new Scanner (System.in);
         
-        //String nom=""; 
-        //double pre=0;
-        //int quat = 0;
+        String nom=""; 
+        double pre=0;
+        int quat = 0;
         
-        Produto p = new Produto();
+        //Produto p = new Produto();
         //System.out.println(p);
         System.out.print("NOME:: ");
-        p.nome = input.nextLine();
-        System.out.print("PREÇO "+p.nome+" :: ");
-        p.preco = input.nextDouble();
-        System.out.print("QUANTIDADE "+p.nome+" :: ");
-        p.qtd  = input.nextInt();
+        //p.nome = input.nextLine();
+        nom = input.nextLine();
+        System.out.print("PREÇO "+nom+" :: ");
+        //p.preco = input.nextDouble();
+        pre = input.nextDouble();
+        System.out.print("QUANTIDADE "+nom+" :: ");
+        quat = input.nextInt();
+        //p.qtd  = input.nextInt();
         
-        //Produto p1 = new Produto(nom,pre,quat);
-        return p;
+        Produto p1 = new Produto(nom,pre,quat);
+        return p1;
     }
 
     public static void main(String[] args) {
@@ -52,7 +61,8 @@ public class ExcStocks {
         Scanner input = new Scanner (System.in);
         
         int op;
-        Produto p1 = new Produto();
+        //Produto p1 = new Produto();
+        Produto p1;
         do{
             menu();
             System.out.print("Opcao-> ");

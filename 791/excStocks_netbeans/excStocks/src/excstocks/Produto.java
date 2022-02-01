@@ -12,16 +12,16 @@ package excstocks;
  */
 public class Produto {
     
-     String nome ="";
+     String nome ="TESTE";
      double preco =0;
      int qtd = 0;
-    /*METODO CONSTRUTOR NÃO USADO
+    /*METODO CONSTRUTOR NÃO USADO*/
     Produto(String n, double pr, int qt){
         this.nome = n;
         this.preco = pr;
         this.qtd = qt;  
     }
-*/
+
     public double totalStock(){
         return this.preco*this.qtd;
     }

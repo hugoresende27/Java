@@ -17,6 +17,11 @@ public class ExcBanco {
      * @param args the command line arguments
      */
     
+     public void menu(){
+        System.out.println("-- PROGRAMA BANCO HR --");
+        System.out.println("1.Abrir Conta");
+    }
+    
    
     public static void main(String[] args) {
         // TODO code application logic here

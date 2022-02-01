@@ -35,25 +35,27 @@ public class ExcStocks {
     
     public static Produto criarProduto(){
         Scanner input = new Scanner (System.in);
-        
-        String nom=""; 
-        double pre=0;
-        int quat = 0;
-        
-        //Produto p = new Produto();
+      
+        Produto p = new Produto();
         //System.out.println(p);
+        
         System.out.print("NOME:: ");
         //p.nome = input.nextLine();
-        nom = input.nextLine();
+        String nom = input.nextLine();
+        p.setNome(nom);
+        
         System.out.print("PREÇO "+nom+" :: ");
         //p.preco = input.nextDouble();
-        pre = input.nextDouble();
-        System.out.print("QUANTIDADE "+nom+" :: ");
-        quat = input.nextInt();
-        //p.qtd  = input.nextInt();
+        double pre = input.nextDouble();
+        p.setPreco(pre);
         
-        Produto p1 = new Produto(nom,pre,quat);
-        return p1;
+        System.out.print("QUANTIDADE "+nom+" :: ");
+        int quat = input.nextInt();
+        //p.qtd  = input.nextInt();
+        p.setQtd(quat);
+        
+        //Produto p1 = new Produto(nom,pre,quat);
+        return p;
     }
 
     public static void main(String[] args) {
@@ -61,8 +63,9 @@ public class ExcStocks {
         Scanner input = new Scanner (System.in);
         
         int op;
-        //Produto p1 = new Produto();
-        Produto p1;
+        
+        Produto p1 = new Produto();
+        //Produto p1;
         do{
             menu();
             System.out.print("Opcao-> ");
@@ -84,10 +87,10 @@ public class ExcStocks {
                     do{
                         System.out.println("Quanto quer retirar ao stock? ");
                         retira = input.nextInt();    
-                        if (retira > p1.qtd){
-                            System.out.println("Nao pode retirar mais do que o stock existente\nSTOCK::"+p1.qtd);
+                        if (retira > p1.getQtd()){
+                            System.out.println("Nao pode retirar mais do que o stock existente\nSTOCK::"+p1.getQtd());
                         }
-                    }while (retira > p1.qtd);
+                    }while (retira > p1.getQtd());
 
                     p1.retirarProduto(retira);
                     System.out.println(p1);   

@@ -50,17 +50,12 @@ public class Conta {
     public void setNome(String nom){
         this.nomeTitular = nom;
     }
-    
-    public void setSaldo(double s){
-        this.saldo=s;
-    }
-    
+
+    ///////////// GETTERS //////////////////
     public int getNumConta(){
         return this.numConta;
     }
-    
-    
-    ///////////// GETTERS //////////////////
+ 
     public String getNome(){
         return this.nomeTitular;
     }

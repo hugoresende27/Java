@@ -64,8 +64,9 @@ public class ExcBanco {
 
             case 1:
                 System.out.println("Valor a depositar?");
-                double depos = input.nextDouble();
-                c1.deposito(depos);
+                //double depos = input.nextDouble();
+                //c1.deposito(depos);
+                c1.deposito(input.nextDouble());
                 System.out.println(c1);
                 break;
             case 2:

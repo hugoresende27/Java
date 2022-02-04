@@ -53,13 +53,13 @@ public class ExcPensao {
                 boolean flag = true;
                 while (flag)
                 {
-                    do{
+                    do{//loop quartos entre 0 e 9
                         System.out.println("Quarto (0-9) ? ");
                         quarto = input.nextInt();
                         input.nextLine();      
-                    }while (quarto<0 || quarto > 10);
+                    }while (quarto<0 || quarto > 9);
                     
-                    if (vetor[quarto]==null) {
+                    if (vetor[quarto]==null) {//se quarto vazio
                         vetor[quarto] = new Estudante(name, email);
                         flag = false;
                     }
@@ -71,9 +71,7 @@ public class ExcPensao {
                                 System.out.print("-"+f+"-");
                             }
                         }
-                    }
-               
-               
+                    }          
                 };
       
         }

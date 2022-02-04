@@ -11,8 +11,6 @@ package entidades;
  */
 public class Produto {
 
-  
-    
     ///atributos
     private String nome;
 

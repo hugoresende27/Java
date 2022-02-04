@@ -25,7 +25,6 @@ public class ExcPensao {
      * @param args the command line arguments
      */
     
-    
     public static void main(String[] args) {
         // TODO code application logic here
         
@@ -33,6 +32,8 @@ public class ExcPensao {
    
         Estudante[] vetor = new Estudante[10];
         int qtd;
+        final double preco= 19.99;
+        double total=0;
         do{
             System.out.println("Quantos estudantes vão alugar quartos?(1-10) ");
             qtd = input.nextInt();
@@ -71,15 +72,23 @@ public class ExcPensao {
                             }
                         }
                     }
-
+               
+               
                 };
       
         }
         
+        total = preco*qtd;
+        System.out.println("Total a pagar :: "+total+"€");
         System.out.println();
         System.out.println("Ocupação: ");
-        for (int i = 0; i < qtd; i++) {        
-              System.out.println(i+ ": " + vetor[i]);
+        for (int i = 0; i < vetor.length; i++) { 
+            if (vetor[i] == null){
+                System.out.println(i+" :: VAZIO");
+            } else {
+                System.out.println(i+ ": " + vetor[i]);
+            }
+              
         }
     }
     

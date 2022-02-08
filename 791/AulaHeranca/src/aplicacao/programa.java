@@ -89,6 +89,22 @@ public class programa {
         c7.levantamentos(900);
         System.out.println("TELMA::\n"+c7);
         
+        Conta c8 = new Conta(2002,"Eisnt",1000);
+        c8.levantamentos(900);
+        System.out.println(c8);
+        
+        Conta c9 = new ContaEmpresa(0.01,3002,"UPS",1000);
+        c9.levantamentos(900);
+        System.out.println(c9);
+        
+        
+        ////////////////POLIFMORFISMO/////////////
+        Conta x = new Conta(1001,"Alex",500);
+        Conta y = new ContaPoupanca(0.02,2001,"Alex2",500);
+        x.levantamentos(50);
+        y.levantamentos(50);
+        System.out.println(x);
+        System.out.println(y);
            
     }
     

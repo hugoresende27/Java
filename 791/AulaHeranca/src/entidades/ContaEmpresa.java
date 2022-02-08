@@ -44,7 +44,12 @@ public class ContaEmpresa extends Conta {
         }
       
     }
-    
+      ///////////// LEVANTAMENTOS //////////////
+    @Override
+    public void levantamentos (double quantia){
+        super.levantamentos(quantia);
+        saldo-=2;
+    }
     
     
 }

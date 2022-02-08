@@ -28,4 +28,11 @@ public class ContaPoupanca extends Conta {
     public void atualizaSaldo(){
         this.saldo += this.saldo * getTaxaJuro();
     }
+    
+    
+    ///////////// LEVANTAMENTOS //////////////
+    @Override
+    public void levantamentos (double quantia){
+        this.saldo -= quantia;
+    }
 }

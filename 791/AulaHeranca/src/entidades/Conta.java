@@ -52,7 +52,7 @@ public class Conta {
   
     ///////////// LEVANTAMENTOS //////////////
     public void levantamentos (double quantia){
-        this.saldo -= quantia;
+        this.saldo -= quantia+5;
     }
     
      ///////////// DEPOSITO //////////////

@@ -26,9 +26,7 @@ public class Produtos_importados extends Produtos {
     @Override
     public String toString(){
          return 
-                "\nDescriçao:: "+getDescricao()
-                +" \nPreço:: "+String.format("%.2f",getPreco())+" €"
-                +"\nCategoria:: "+getCategoria()
+                super.toString()
                 +"\nPRODUTO IMPORTADO \nNome:: "+getNome()+"\n--------------";
     }
 }

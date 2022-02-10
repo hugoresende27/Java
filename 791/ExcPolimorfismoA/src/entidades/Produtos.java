@@ -53,5 +53,13 @@ public class Produtos {
     public void setPreco(double preco) {
         this.preco = preco;
     }
-    
+    ///////////// TO STRING //////////////////
+    @Override
+    public String toString(){
+         return 
+                "\nDescriçao:: "+getDescricao()
+                +" \nPreço:: "+String.format("%.2f",getPreco())+" €"
+                +"\nCategoria:: "+getCategoria()
+               ;
+    }
 }

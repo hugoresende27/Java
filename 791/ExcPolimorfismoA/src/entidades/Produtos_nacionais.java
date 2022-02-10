@@ -27,10 +27,7 @@ public class Produtos_nacionais extends Produtos {
     @Override
     public String toString(){
         return 
-                "\nDescriçao:: "+getDescricao()
-                +" \nPreço:: "+String.format("%.2f",getPreco())+" €"
-                +"\nCategoria:: "+getCategoria()
-                +"\nBiológico:: "+getBiologico()
+                super.toString()
                 +"\nPRODUTO NACIONAL\nNome:: "+getNome()+"\n--------------\n";
     }
     

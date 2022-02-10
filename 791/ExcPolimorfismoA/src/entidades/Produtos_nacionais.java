@@ -28,6 +28,7 @@ public class Produtos_nacionais extends Produtos {
     public String toString(){
         return 
                 super.toString()
+                +"\nBIO::"+getBiologico()
                 +"\nPRODUTO NACIONAL\nNome:: "+getNome()+"\n--------------\n";
     }
     

@@ -55,23 +55,23 @@ public class Midia {
     }
     
     public void InserirDados(){
+        System.out.print("Nome-->");
+        String n = input.nextLine();
+        this.setNome(n);
         System.out.print("Código-->");
         int c = input.nextInt();
         this.setCodigo(c);
         System.out.print("Preço-->");
         double p = input.nextDouble();
-        this.setPreco(p);
-        System.out.print("Nome-->");
-        String n = input.nextLine();
-        this.setNome(n);
-        
+        this.setPreco(p);   
     }
     
                  ///////////// TO STRING //////////////////
+    
     @Override
     public String toString(){
          return 
-                "\nNome:: "+getNome()
+                "\nNome:: "+this.nome
                 +" \nPreço:: "+String.format("%.2f",getPreco())+" €"
                 +"\nCódigo:: "+getCodigo()
                 ;

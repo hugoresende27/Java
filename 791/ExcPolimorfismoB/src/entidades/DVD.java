@@ -22,6 +22,8 @@ public class DVD extends Midia {
         this.faixas = f;
     }
 
+  
+    
     public int getFaixas() {
         return faixas;
     }
@@ -33,12 +35,18 @@ public class DVD extends Midia {
     @Override
       public void InserirDados(){
         super.InserirDados();
-        input.nextLine();
+        
         System.out.print("Faixas-->");
         int fx = input.nextInt();
         this.setFaixas(fx);
     }
-      
+    ////////////////////////////////// TO STRING //////////////////
+    @Override
+    public String toString(){
+         return 
+               super.toString()
+                +"\nDVD \nFaixas:: "+getFaixas()+"\n--------------";
+    }
   
     
 }

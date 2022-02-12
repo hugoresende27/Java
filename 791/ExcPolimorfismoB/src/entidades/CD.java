@@ -21,6 +21,7 @@ public class CD extends Midia {
         super(codigo, preco, nome);
         this.musicas = m;
     }
+  
 
     public void setMusicas(int musicas) {
         this.musicas = musicas;
@@ -33,19 +34,17 @@ public class CD extends Midia {
     @Override
       public void InserirDados(){
          super.InserirDados();
-        input.nextLine();;
+        //input.nextLine();;
         System.out.print("Musicas-->");
         int fx = input.nextInt();
         this.setMusicas(fx);
     }
       
-                   ///////////// TO STRING //////////////////
+    ////////////////////////////////// TO STRING //////////////////
     @Override
     public String toString(){
          return 
-                "\nNome:: "+getNome()
-                +" \nPreço:: "+String.format("%.2f",getPreco())+" €"
-                +"\nCódigo:: "+getCodigo()
+                super.toString()
                 +"\nCD \nMusicas:: "+getMusicas()+"\n--------------";
     }
     
